@@ -1,19 +1,25 @@
 {
-  "name": "circle-sliders",
-  "private": true,
+  "name": "@micjanic/circle-sliders",
   "version": "0.0.0",
   "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "Michael Janicki",
+    "url": "https://github.com/micjanic"
+  },
+  "keywords": [],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
   "devDependencies": {
+    "@types/node": "^20.12.7",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
@@ -22,7 +28,17 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
+    "pixi.js": "^8.1.0",
+    "@pixi/react": "^7.1.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
+  },
+  "peerDependencies": {
+    "pixi.js": "^8.1.0",
+    "@pixi/react": "^7.1.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
