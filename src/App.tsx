@@ -1,5 +1,5 @@
 import './App.css';
-import CircleSliders from './lib/CircleSliders';
+import CircleSliders from './components/CircleSliders';
 
 function App() {
   return <CircleSliders />;

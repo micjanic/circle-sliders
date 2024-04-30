@@ -11,9 +11,9 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/lib/index.jsx'),
+      entry: path.resolve(__dirname, 'src/components/index.tsx'),
       name: '@micjanic/circle-sliders',
-      fileName: (format) => `my-component.${format}.js`,
+      fileName: (format) => `circle-sliders.${format}.js`,
     },
     rollupOptions: {
       external: ['react', 'react-dom', '@pixi/react', 'pixi.js'],
