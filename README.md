@@ -1,30 +1,33 @@
-# React + TypeScript + Vite
+# @micjanic/circle-sliders
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React component library for creating circular sliders.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Install the package
 
-## Expanding the ESLint configuration
+- npm install @micjanic/circle-sliders
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Make sure to also install the following peer dependencies in your project:
 
-- Configure the top-level `parserOptions` property like this:
+- [pixi.js](https://www.npmjs.com/package/pixi.js) (^8.1.0)
+- [@pixi/react](https://www.npmjs.com/package/@pixi/react) (^7.1.2)
+- [react](https://www.npmjs.com/package/react) (^18.2.0)
+- [react-dom](https://www.npmjs.com/package/react-dom) (^18.2.0)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Usage
+
+```jsx
+import React from 'react';
+import { CircleSlider } from '@micjanic/circle-sliders';
+
+const MyComponent = () => {
+  return (
+    <div>
+      <CircleSlider />
+    </div>
+  );
+};
+
+export default MyComponent;
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list

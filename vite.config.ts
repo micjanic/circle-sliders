@@ -11,7 +11,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/components/index.tsx'),
+      entry: path.resolve(__dirname, 'src/components/CircleSliders.tsx'),
       name: '@micjanic/circle-sliders',
       fileName: (format) => `circle-sliders.${format}.js`,
     },
@@ -23,6 +23,8 @@ export default defineConfig({
         },
       },
     },
+    outDir: 'dist',
+    sourcemap: true,
   },
   plugins: [react()],
 });

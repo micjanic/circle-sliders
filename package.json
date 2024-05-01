@@ -1,6 +1,6 @@
 {
   "name": "@micjanic/circle-sliders",
-  "version": "0.0.1",
+  "version": "0.0.31",
   "type": "module",
   "license": "MIT",
   "author": {
@@ -12,9 +12,30 @@
     "dist",
     "README.md"
   ],
+  "main": "./dist/circle-sliders.umd.js",
+  "module": "./dist/circle-sliders.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/circle-sliders.es.js",
+      "require": "./dist/circle-sliders.umd.js"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "publish": "npm run build && npm publish",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -36,9 +57,23 @@
     "vite": "^5.2.0"
   },
   "peerDependencies": {
-    "pixi.js": "^8.1.0",
-    "@pixi/react": "^7.1.2",
+    "pixi.js": "^7.2.4",
+    "@pixi/react": "^7.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true,
+      "es2020": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "parserOptions": {
+      "sourceType": "module"
+    }
   }
 }
